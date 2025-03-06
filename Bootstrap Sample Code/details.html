@@ -154,6 +154,10 @@
                         font-size: medium;
                         font-weight: bold;
                     }
+                    .customh4 {
+                        font-size: x-large;
+                        font-weight: 500;
+                    }
 
                     .popular-tag {
                         background-color: #28a745; 
@@ -163,57 +167,86 @@
                         border-radius: 4px;
                         font-weight: bold;
                     }
+                    .card {
+                        width: 520px; 
+                        height: 320px;
+                    }
+
+                    .card img {
+                        width: 90px; 
+                        margin: 20px;
+                        padding-right: 5%;          
+                    }
+
+                    .cardcaption {
+                        position: absolute;
+                        left: 55%; 
+                        top: 53%; 
+                        transform: translateY(-50%); 
+                        width: 45%; 
+                        text-align: left; 
+                        color: rgb(0, 0, 0); 
+                        padding: 20px;
+                        border-radius: 10px;
+                        margin-left:auto;
+                        margin-right: 3px;
+
+                    }
+                    .row.w-100 {
+                        gap: 90px;
+                    }
+
 
                 </style>
                 
 
 <!-- La Vielle Card (need fix, some parts are still carousel) -->
-                    <div id="LaVieilleFerme" class="col-md-5">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="imgs/LaVieilleFerme.png" alt="La Vieille Ferme">
-                                <div class="carousel-caption">
-                                    <h5>La Vieille Ferme</h5>
-                                    <p>Since 1970, La Vieille Ferme has been producing authentic, honest and tasty wines vintage after vintage. In some of the world's best restaurants and bars, La Vieille Ferme has been acknowledged as one of the best value for money wines in the world.</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row w-30 mt-4">
+                <div class="card">
+                    <img src="https://empirewine.imgix.net/item-hqid/53597.jpg?auto=format,compress&fit=max&fill-color=FFFFFF&pad=20&h=600&w=600" class="card-img-top" alt="Avatar" style="width:53%">
+                    <div class="cardcaption">
+                        <h4 class="customh4">La Vieille Ferme</h4>
+                        <p>Since 1970, La  Vieille has been producing authentic, honest and tasty wines vintage after vintage. In some of the world's best restaurants and bars, La Vieille Ferme has been acknowledged as one of the best value for money wines in the world.</p>
                     </div>
+                </div>
 <!-- Right side of the card -->
-                    <div class="col-4 d-flex flex-column align-items-start ml-4">
-                        <h4 class="mb-4">Purchase Details:</h4>
-                        <h4 class="customh6">
-                            La Vielle Ferme Rouge 
-                            <span class="popular-tag">Popular</span>
-                        </h4>
-                        
-                        <h6>by: <a class="nav-link d-inline p-0" href="#">Famille Perrin</a></h6>
-
-                        <div class="row w-100">
-                            <div class="col">
-                                <label for="vintageSelect" class="form-label">Vintage</label>
-                                <select id="vintageSelect" class="form-control">
-                                    <option selected>2016</option>
-                                    <option value="1">2015</option>
-                                    <option value="2">2014</option>
-                                    <option value="3">2013</option>
-                                </select>
-                            </div>
+                <div class="col-4 d-flex flex-column align-items-start ml-4">
+                    <h4 class="mb-4">Purchase Details:</h4>
+                    <h4 class="customh6">
+                        La Vielle Ferme Rouge 
+                        <span class="popular-tag">Popular</span>
+                    </h4>
                     
-                            <div class="col">
-                                <label for="quantityInput" class="form-label">Quantity</label>
-                                <input type="number" id="quantityInput" name="quantity" class="form-control" placeholder="">
-                            </div>
-                            <div class="col-12 text-center mt-3"">
-                                <form id="login_form" method="POST" action="inside_bootstrapped.html">
+                    <h6>by: <a class="nav-link d-inline p-0" href="#">Famille Perrin</a></h6>
+
+                    <div class="row w-100">
+                        <div class="col">
+                            <label for="vintageSelect" class="form-label">Vintage</label>
+                            <select id="vintageSelect" class="form-control">
+                                <option selected>2016</option>
+                                <option value="1">2015</option>
+                                <option value="2">2014</option>
+                                <option value="3">2013</option>
+                            </select>
+                        </div>
+                
+                        <div class="col">
+                            <label for="quantityInput" class="form-label">Quantity</label>
+                            <input type="number" id="quantityInput" name="quantity" class="form-control" placeholder="">
+                        </div>
+                        <div class="row mt-3 w-100">
+                            <div class="col-12">
+                                <form id="cartForm" method="POST" action="inside_bootstrapped.html">
                                     <button type="submit" class="btn btn-primary w-100">Add to Cart</button>
                                 </form>                
                             </div>
-                        </div>
+                        </div>                 
+                    </div>
                 </div>
             </div>                             
         </div>
     </div>
+                
                 
                 <div class="col-md-auto justify-content-center">
                     <label for="field3" class="form-label">Send a Message:</label>
@@ -226,9 +259,7 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>                
                 </div>
-    
-                
-                
+        </div>
     </div>
 
 
