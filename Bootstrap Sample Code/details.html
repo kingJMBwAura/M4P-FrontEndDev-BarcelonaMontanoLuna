@@ -12,31 +12,6 @@
 -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
-    .header {
-        text-align: center;
-        background-color: rgb(56, 2, 2);
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        padding: 20px;
-        width: 100%;
-    }
-    .header h1 {
-        font-size: 50px;
-        font-weight: bold;
-        font-family: cursive;
-    }
-    .headertext p {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    .btn {
-        margin: 10px;
-        padding: 10px 20px;
-    }
-
     #bestSellers .carousel-inner img {
     object-fit: cover;
     height: 400px;
@@ -46,23 +21,16 @@
     background: none;
     border: none;
     }
-
+    .barnav {
+        padding-top: 10px;
+    }
 </style>
 </head>
 <body>
 
-    <div class="header">
-        <div class="headertext">
-            <h1>Fine Wine</h1>
-            <p>The place to buy the best wines!<br>
-                <a href="producers.html" class="btn btn-outline-light">About us</a>
-                <a href="inside_bootstrapped.html" class="btn btn-outline-light">Wine List</a>
-            </p>
-        </div>
-    </div>
     <div class="row">
         <div class="col-12 pt-2">
-            <h1 class="ml-3"> Wines For Sale</h1>
+            <h1 class="ml-3">Wines For Sale</h1>
         </div>
         <div class="col-12">
 
@@ -106,11 +74,14 @@
         </div>
     </div>
 <!-- End of Carousel -->
-    </div>
+
     <div class="container-fluid">      
             <div class="row">
                 <div class="col-2 justify-content-left">
-                        <ul class="nav flex-column">
+                        <ul class="nav flex-column barnav">
+                            <li class="nav-item"><a class="nav-link" href="producers.html">About the Producers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="inside_bootstrapped.html">Wine List</a></li>
+                            <br>
                             <li class="nav-item"><a class="nav-link" href="details.html">French Wines</a></li>
                             <li class="nav-item"><a class="nav-link" href="details.html">Italian Wines</a></li>
                             <li class="nav-item"><a class="nav-link" href="details.html">Spanish Wines</a></li>
@@ -193,7 +164,8 @@
 
                     }
                     .row.w-100 {
-                        gap: 90px;
+                        column-gap: 50px;
+                        row-gap: 20px;
                     }
 
 
@@ -234,7 +206,7 @@
                             <label for="quantityInput" class="form-label">Quantity</label>
                             <input type="number" id="quantityInput" name="quantity" class="form-control" placeholder="">
                         </div>
-                        <div class="row mt-3 w-100">
+                        <div class="row ml-1 w-100">
                             <div class="col-12">
                                 <form id="cartForm" method="POST" action="inside_bootstrapped.html">
                                     <button type="submit" class="btn btn-primary w-100">Add to Cart</button>
@@ -248,7 +220,7 @@
     </div>
                 
                 
-                <div class="col-md-auto justify-content-center">
+                <div class="col-md-3 justify-content-center">
                     <label for="field3" class="form-label">Send a Message:</label>
                 </div>
                 <div class="col-md-auto">
